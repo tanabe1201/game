@@ -1,0 +1,75 @@
+@use "../foundation"as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 6.266666666666667vw 5.333333333333334vw 0;
+  @include mq-target(sm) {
+    padding: vw(10px, 769) vw(60px, 769) 0;
+  }
+
+
+  &__gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    pointer-events: none;
+    height: 10.980966325036604vw;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.828) 80%, #000 100%);
+  }
+
+  &__inner {
+    position: relative;
+    @include flex($align:center, $justify:space-between);
+    height: min(2.8125vw, 80px);
+    @include mq-target(sm) {
+      height: vw(60px, 1920);
+    }
+  }
+
+  &__logo {
+    width: vw(50px, 365);
+    @include mq-target(sm) {
+      width: vw(46px, 769);
+    }
+    a {
+      display: block;
+    }
+  }
+
+  &__wrap {
+    &--pc {
+      position: relative;
+      @include flexCenter;
+      z-index: 5;
+      display: none;
+      @include mq-target(sm) {
+        display: block;
+      }
+    }
+
+    &--sp {
+      display: block;
+      @include mq-target(sm) {
+        display: none;
+      }
+    }
+  }
+
+
+  &-nav {
+    &__list {
+      @include flex($align:center);
+    }
+    &__item {
+      margin-left: vw(14px, 769);
+      font-size: vw(7px, 769);
+      font-weight: 700;
+    }
+  }
+}

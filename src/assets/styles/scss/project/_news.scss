@@ -1,0 +1,115 @@
+@use "../foundation"as *;
+
+.p-news {
+  position: relative;
+  z-index: 500;
+  // background: $color-bg;
+
+  padding: 60px 0 80px;
+
+  @include mq-target(sm) {
+    padding: vw(60px, 1920) 0 vw(80px, 1920);
+  }
+
+  &::before {
+    content: "";
+    @include absAll;
+    background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__inner {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    @include mq-target(sm) {
+      width: 96%;
+    }
+
+    @include mq-target(md) {
+      width: 72%;
+    }
+  }
+
+  &__list {
+    position: relative;
+
+    margin: 0 -20px 0;
+    @include mq-target(sm) {
+      border-bottom: initial;
+      @include flex($wrap:wrap);
+      margin: 0 vw(-20px,1920);
+    }
+  }
+
+  &__item {
+    position: relative;
+    border-top: 2px solid #333333;
+    text-align: left;
+    margin: -3px 20px 0;
+
+    @include mq(sm) {
+      &:nth-of-type(3) {
+        border-bottom: 2px solid #333333;
+      }
+    }
+
+
+    
+    @include mq-target(sm) {
+      border-bottom: vw(2px, 1920) solid #333333;
+      border-top: vw(2px, 1920) solid #333333;
+      margin: vw(-2px, 1920) vw(20px, 1920) 0;
+      width: calc(50% - vw(40px, 1920));
+    }
+    a {
+      position: relative;
+      padding: 14px 36px 14px 0;
+      @include mq-target(sm) {
+        padding: vw(20px, 1920) vw(40px, 1920) vw(20px,1920) 0;
+      }
+      display: block;
+
+      &:hover {
+        transition: all 0.4s ease;
+        opacity: 0.35;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        border-right: vw(2px, 1920) solid $color-red;
+        border-top: vw(2px, 1920) solid $color-red;
+        content: "";
+        height: 7px;
+        width: 7px;
+        transform: translate(0, -50%) rotate(45deg);
+        
+        @include mq-target(sm) {
+          right: vw(12px, 1920);
+          height: vw(7px, 1920);
+          width: vw(7px, 1920);
+        }
+      }
+    }
+
+    h3 {
+      font-size: 12px;
+      color: $color-red;
+      font-weight: 600;
+      @include mq-target(sm) {
+        font-size: vw(18px, 1920);
+      }
+    }
+
+    h2 {
+      font-size: 12px;
+      font-weight: 500;
+      @include mq-target(sm) {
+        font-size: vw(16px, 1920);
+      }
+    }
+  }
+}

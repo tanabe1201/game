@@ -1,0 +1,16 @@
+@use "../foundation" as *;
+
+.c-button {
+  position: relative;
+  @include flex($align:center, $justify:center);
+  // padding-bottom: 0.977vw;
+  // margin: 0 -0.521vw 0;
+  @include mq-target(sm) {
+    padding-bottom: 0.321vw;
+  }
+  &::before {
+    content: "";
+    @include absAll;
+    z-index: 0;
+  }
+}

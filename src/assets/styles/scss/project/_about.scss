@@ -1,0 +1,89 @@
+@use "../foundation"as *;
+
+
+.p-about {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    position: relative;
+    width: 100%;
+    background: $color-bg;
+    padding: 100px 0 0;
+
+    @include mq-target(sm) {
+        padding: vw(0px, 1920) 0 vw(40px, 1920);
+    }
+
+    &__inner {
+        height: vw(700px, 768);
+        // position: relative;
+        width: 90%;
+        margin: auto;
+
+        @include mq-target(sm) {
+            height: vw(900px, 1920);
+            // @include flexCenter;
+        }
+
+    }
+
+    &__bg {
+        @include absAll;
+        z-index: 0;
+        height: auto;
+
+        img {
+            display: block;
+            height: auto;
+            width: 100%;
+            margin: auto;
+            @include mq-target(sm) {
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                width: vw(1500px, 1920);
+                perspective-origin: 50% 50%;
+                transform-origin: center;
+                transform: translate(50%, 16%);
+                transform: translate(vw(740px, 1920), vw(60px, 1920)) rotate(356deg) rotateY(355deg) rotateX(12deg);
+            }
+        }
+    }
+
+    &__txt {
+        position: relative;
+        text-align: left;
+        width: 100%;
+        top: vw(50px, 365);
+
+        @include mq-target(sm) {
+            width: vw(900px, 1920);
+            top: vw(520px, 1920);
+            position: absolute;
+            left: calc(50% - min(39.3229166667vw, 755px));
+        }
+
+        @include mq-target(md) {
+            left: vw(300px, 1920);
+        }
+
+        .c-sec__ttl {
+            margin: 0 0 10px;
+        }
+
+        p {
+            font-size: min(vw(10px, 365), 12px);
+            font-family: $shippo;
+            text-align: left;
+            font-weight: 400;
+            margin-top: 10px;
+
+            @include mq-target(sm) {
+                margin-top: vw(10px, 1920);
+                font-size: vw(16px, 1920);
+            }
+        }
+    }
+}
+

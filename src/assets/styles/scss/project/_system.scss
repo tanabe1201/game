@@ -1,0 +1,83 @@
+@use "../foundation"as *;
+
+.p-sys {
+    position: relative;
+    padding-top: 80px;
+    &__inner {
+        margin-top: 20px;
+        @include maxWidth(1000px);
+    }
+
+    &-slider {
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            @include mq-target(sm) {
+                display: block;
+            }
+        }
+    }
+
+    &-content {
+
+        &__ttl {
+            @include flex($align:center, $wrap:wrap);
+            h3 {
+                border-left: 1px solid $color-red;
+                margin-left: 12px;
+                padding-left: 12px;
+                font-size: 28px;
+                position: relative;
+                z-index: 1;
+                font-weight: 600;
+                margin-bottom: 0;
+                text-shadow: black 1px 1px 7px, black -1px 1px 7px, black 1px -1px 7px, black -1px -1px 7px;
+            }
+
+            p {
+                position: relative;
+                top: 2px;
+                font-size: 34px;
+                background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+                -webkit-background-clip: text;
+                color: transparent;
+                font-weight: 700 !important;
+            }
+        }
+
+        &__txt {
+            font-size: min(vw(10px, 365), 14px);
+            text-align: left;
+            line-height: 2;
+
+            margin: 20px 0;
+            @include mq-target(sm) {
+                font-size: vw(16px, 1920);
+                margin: 20px 0 40px;
+            }
+        }
+
+        &__thumb {
+            @include flex($align:center, $justify:space-between);
+            flex-wrap: wrap;
+            @include mq-target(sm) {
+                margin: 0;
+            }
+        }
+
+        &__img {
+            transition-delay: .2s;
+            width: 100%;
+            width: 48%;
+            @include mq-target(xs) {
+                // transform: rotate(-2deg);
+                // &:nth-child(2) {
+                //     transform: rotate(4deg);
+                // }
+            }
+
+        }
+
+    }
+}

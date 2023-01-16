@@ -1,0 +1,277 @@
+@use "../foundation"as *;
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+nav ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+html.wf-active,
+html.loading-delay {
+	visibility: visible;
+}
+
+html.is-locked {
+	overflow: hidden;
+	height: 100%;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+	background-repeat: no-repeat;
+	/* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+	box-sizing: inherit;
+}
+
+// html::-webkit-scrollbar{
+// 	display:none;
+//   }
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: $color-black;
+	color: $color-main;
+	// font-family: 'teko', 'Noto Serif JP', serif;
+	// font-family: "teko", 'M PLUS 1', Arial, sans-serif;
+	font-family: "teko", 'Shippori Mincho B1', sans-serif;
+	font-weight: 800;
+	letter-spacing: 0.05em;
+	min-height: 100vh;
+	text-align: center;
+	font-feature-settings: "palt";
+}
+
+body img {
+	width: 100%;
+	display: block;
+}
+
+body video {
+	display: block;
+}
+
+body:lang(ja-jp) {
+	font-family: "Shippori Mincho B1", sans-serif
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+	color: $color-main;
+	cursor: pointer;
+}
+
+li {
+	list-style-type: none;
+}
+
+figure {
+	text-align: center;
+}
+
+img,
+video {
+	font-size: 0;
+	line-height: 0;
+}
+
+button {
+	outline: none;
+}
+
+button,
+input,
+textarea {
+	border-radius: 0;
+}
+
+
+.u-dp-pc {
+	display: block;
+
+	@include mq(md) {
+		display: none;
+	}
+
+	&--sm {
+		display: block;
+
+		@include mq(sm) {
+			display: none;
+		}
+	}
+}
+
+
+.u-dp-sp {
+	display: none;
+
+	@include mq(md) {
+		display: block;
+	}
+
+	&--sm {
+		display: none;
+
+		@include mq(sm) {
+			display: block;
+		}
+	}
+}
+
+
+.u-flexbox {
+	display: flex;
+}
+
+.u-flexbox-wrap {
+	flex-wrap: wrap;
+}
+
+
+/*--------------------------------
+ ローディング
+---------------------------------*/
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9000;
+	width: 100vw;
+	height: 100%;
+    background-image: linear-gradient(rgba($color-bg, 0.75)), url("../../assets/images/charaBg_04.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.loading-animation {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	margin: 0;
+	transform: translate(-50%, -50%);
+}
+
+.loading-text {
+	color: $color-red;
+	margin-top: 10px;
+}

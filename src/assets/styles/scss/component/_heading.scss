@@ -1,0 +1,156 @@
+@use "../foundation"as *;
+
+.c-sec {
+    position: relative;
+    // overflow: hidden;
+    @include flexCenter;
+
+    &__ttl {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 14px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 10;
+        @include mq-target(sm) {
+            margin-bottom: vw(30px, 1920);
+        }
+
+        span {
+            display: block;
+            line-height: 1.2;
+        }
+
+        .-en {
+            position: relative;
+            top: 5px;
+            color: $color-white;
+            letter-spacing: 0.04em;
+            line-height: 1;
+            opacity: 0.45;
+            background-image: linear-gradient(to bottom, #fd1e00, #dc1b6f);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 60px;
+            font-size: min(vw(42px,365),60px);
+            font-weight: 600;
+            @include mq-target(sm) {
+                top: vw(5px, 1920);
+                font-size: vw(84px , 1920);
+            }
+        }
+
+        .-ja {
+            height: 100%;
+            left: 0;
+            right: 0;
+            top: 4px;
+            // bottom: 25px;
+            margin: auto;
+            position: absolute;
+            text-align: center;
+            font-size: 18px;
+            font-size: min(vw(16px,365),18px);
+            @include mq-target(sm) {
+                top: vw(2px, 1920);
+                font-size: vw(24px , 1920);
+                // font-size: min(vw(18px, 768), 24px);
+            }
+            @include flex($justify:center,$align:center);
+            font-weight: 600;
+            filter: drop-shadow(0 0 vw(12px, 1920) rgba(254, 233, 46, 0.45));
+        }
+
+
+    }
+
+    @include mq-target(sm) {
+
+        &__ttl {
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+            // margin-bottom: min(vw(20px, 768),30px);
+        }
+    }
+
+    &__heading {
+        @include flex($align:center, $wrap:wrap);
+
+        p {
+          position: relative;
+          top: 2px;
+          font-size: 34px;
+          background-image: linear-gradient(to bottom, #d81c03, #352e2c);
+          -webkit-background-clip: text;
+          color: transparent;
+          font-weight: 700;
+          @include mq-target(sm) {
+            font-size: vw(34px,1920);
+          }
+        }
+  
+        h3 {
+          border-left: 1px solid $color-red;
+          margin-left: 12px;
+          padding-left: 12px;
+          font-size: 24px;
+          position: relative;
+          z-index: 1;
+          @include mq-target(sm) {
+            font-size: vw(24px,1920);
+          }
+        }
+    }
+}
+
+
+.index {
+    &__bg {
+        background-image: url(../../assets/images/storyBg_01.jpg);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: min(153.1942633638vw, 720px);
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        @include mq-target(sm) {
+            height: min(56.25vw, 880px);
+        }
+
+        // transform: translate(-50%, -50%);
+        // transition: 1.2s cubic-bezier(0.65, 0.05, 0.36, 1);
+        // filter: blur(10px);
+        // }
+        // &::before {
+        //     display: block;
+        //     position: absolute;
+        //     content: "";
+        //     background: url(../img/bg_top.jpg) 50% 0% no-repeat;
+        //     background-color: black;
+        //     background-size: cover;
+        //     width: min(100vw,1920px);
+        //     height: min(153.1942633638vw,1175px);
+        //     @include mq-target(sm) {
+        //       height: min(56.25vw, 880px);
+        //     }
+        //     top: 0;
+        //     left: 0;
+        //     pointer-events: none;
+        //     margin: 0 auto;
+        //     background-image: url(../../assets/images/storyBg_01.jpg);
+        //     transition: none;
+        //     transition-delay: 0s;
+        //     transition: background-position 2500ms ease-in-out;
+        // }
+
+        // &.is-anim {
+        //     &::before {
+        //         background-position: center top;
+        //     }
+        // }
+    }
+}

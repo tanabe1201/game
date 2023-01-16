@@ -1,0 +1,21 @@
+@use "../foundation"as *;
+.c-line {
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    padding-top: 18.94737%;
+    margin-bottom: -1%;
+    background: url(../../assets/images/smoke.webp);
+    background-size: auto 100%;
+    background-position: center top;
+    background-repeat: repeat-x;
+  
+    @include mq-target(sm) {
+      padding-top: 9.375%;
+    }
+  
+    &--reverse {
+      margin-top: -1%;
+      transform: scaleY(-1);
+    }
+  }

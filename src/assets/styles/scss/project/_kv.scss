@@ -1,0 +1,95 @@
+@use "../foundation"as *;
+
+.p-kv {
+    position: relative;
+    overflow: hidden;
+    background: $color-bg;
+
+    &::before {
+        content: "";
+        @include absAll;
+        background: url("../../assets/images/kv_sp.jpg") top center / contain;
+        width: 100vw;
+        height: 140vw;
+        
+        @include mq-target(sm) {
+            height: 54.948vw;
+            background: url("../../assets/images/kv_pc.jpg") top center / contain;
+        }
+    }
+
+    &__inner {
+        height: 140vw;
+
+        @include mq-target(sm) {
+            height: 54.948vw;
+        }
+    }
+
+
+
+    &__catch {
+        position: absolute;
+        top: 60vw;
+        left: calc(50% - vw(-10px, 365));
+        z-index: 50;
+        // transition-delay: 3s;
+
+        @include mq-target(sm) {
+            left: calc(50% - vw(-100px, 769));
+            top: 18.333vw;
+        }
+
+        span {
+            img {
+                width: 44.598vw;
+
+                @include mq-target(sm) {
+                    width: 24.396vw;
+                }
+            }
+        }
+    }
+
+    &__chara {
+        position: absolute;
+        width: 100vw;
+        top: 17.852vw;
+        display: flex;
+        justify-content: center;
+
+        @include mq-target(sm) {
+            top: 6vw;
+        }
+
+        span {
+            display: block;
+            height: 100%;
+            position: relative;
+            mask-image: url(../../assets/images/mask.png);
+            mask-mode: alpha;
+            mask-repeat: no-repeat;
+            mask-size: 100% 0%;
+            mask-position: center top;
+            transition: 9s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            &.is-anim {
+                -webkit-mask-size: 100% 300%;
+                // transition-delay: 3s;
+            }
+        }
+
+
+
+        img {
+            width: 80vw;
+
+            @include mq-target(sm) {
+
+                width: 34.333vw;
+            }
+
+        }
+    }
+}
+

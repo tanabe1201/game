@@ -1,0 +1,842 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  <meta name="description" content="説明文">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@s_tanabe">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <link rel="icon" href="./assets/images/icon/favicon-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="./assets/styles/vendors/lity.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="./assets/styles/vendors/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./assets/styles/style.min.css" rel="stylesheet">
+</head>
+
+<body id="top" data-character="1">
+  <header class="l-header">
+    <div class="l-header__gradient"></div>
+    <div class="l-header__inner">
+      <h1 class="l-header__logo">
+        <a href="/">
+          <img src="./assets/images/title.png" alt="ghost" loading="lazy">
+        </a>
+      </h1>
+      <div class="l-header__wrap--pc">
+        <nav class="l-header-nav">
+          <ul class="l-header-nav__list">
+            <li class="l-header-nav__item">
+              <a href="#top">
+                最初
+              </a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="/">
+                情報
+              </a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="#about">
+                概要
+              </a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="#story">
+                物語
+              </a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="#chara">
+                登場人物
+              </a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="#system">
+                進行方法
+              </a>
+            </li>
+            <li class="l-header-nav__item">
+              <a href="#product">
+                製品情報
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="l-header__wrap--sp">
+        <div class="l-drawer__trigger js-draw--trigger">
+          <span class="-line"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="l-drawer__bg js-draw--bg">&nbsp;</div>
+  <nav class="l-drawer__content js-draw--content">
+    <a href="">
+      <figure class="l-drawer__logo">
+        <img src="./assets/images/title.png" alt="">
+      </figure>
+    </a>
+    <div class="l-drawer__wrap">
+      <ul class="l-drawer__list l-drawer__list--menu">
+        <li class="l-drawer__item">
+          <a href="#top" class="js-draw--trigger">
+            トップ
+            <span>top</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#about" class="js-draw--trigger">
+            ストーリー
+            <span>story</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#system" class="js-draw--trigger">
+            ゲームシステム
+            <span>system</span>
+          </a>
+        </li>
+        <li class="l-drawer__item">
+          <a href="#chara" class="js-draw--trigger">
+            キャラクター
+            <span>character</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="c-icon c-icon__scroll">
+    <p class="c-icon__txt c-icon__txt--scroll">scroll</p>
+  </div>
+
+<main class="l-main">
+    <div class="p-mv__bg sc-inview glitch">
+        <div class="channel r"></div>
+        <div class="channel g"></div>
+        <div class="channel b"></div>
+        <figure class="p-mv__obj">
+            <img src="./assets/images/mv_obj01.png" alt="" class="sc-inview">
+        </figure>
+    </div>
+    <section id="keyvisual" class="p-kv">
+        <div class="p-kv__inner">
+            <p class="p-kv__catch">
+                <span class="inview js-scroll--fadeUp">
+                    <img src="./assets/images/logo_large.webp" alt="logo" loading="lazy">
+                </span>
+            </p>
+
+            <p class="p-kv__chara">
+                <span class="inview">
+                    <img src="./assets/images/test_03_beta.png" alt="" loading="lazy">
+                </span>
+            </p>
+
+        </div>
+        <!-- <div class="c-smoke c-smoke__bottom"></div> -->
+    </section>
+
+    <section id="movie" class="p-movie">
+        <!-- <div class="c-smoke c-smoke__top"></div> -->
+        <div class="p-movie__inner">
+            <div class="p-movie__header">
+                <h2 class="c-sec__ttl" style="margin: 0;">
+                    <span class="-en">movie</span>
+                    <span class="-ja">映像情報</span>
+                </h2>
+                <div class="p-movie-slider__btn">
+                    <div class="p-movie-slider__btnPrev"></div>
+                    <div class="p-movie-slider__btnNext"></div>
+                </div>
+
+            </div>
+
+            <div class="p-movie-slider">
+
+                <div class="swiper p-movie-slider__container">
+                    <ul class="swiper-wrapper p-movie-slider__wrap">
+                        <li class="swiper-slide p-movie-slider__slide">
+                            <a href="/work/detail" class="inview p-movie-content__link">
+
+                                <figure class="c-picture__img p-movie-content__img">
+                                    <picture>
+                                        <img src="./assets/images/thumb_03.jpg" alt="メインビジュアル" loading="lazy">
+                                    </picture>
+                                </figure>
+                                <figcaption class="p-movie-content__cap">
+                                    <ul class="p-movie-content__labels">
+                                        <li class="date">2022.01.06</li>
+                                        <li class="info">お知らせ</li>
+                                    </ul>
+                                    <strong class="p-movie-content__heading">
+                                        ネット配信についてのガイドラインを公開しました。
+                                    </strong>
+                                </figcaption>
+
+                            </a>
+                        </li>
+                        <li class="swiper-slide p-movie-slider__slide">
+                            <a href="#chara" class="inview p-movie-content__link">
+                                <figure class="c-picture__img p-movie-content__img">
+                                    <picture>
+                                        <img src="./assets/images/thumb_01.jpg" alt="メインビジュアル" loading="lazy">
+                                    </picture>
+                                </figure>
+                                <figcaption class="p-movie-content__cap">
+                                    <ul class="p-movie-content__labels">
+                                        <li class="date">2022.01.06</li>
+                                        <li class="info">更新情報</li>
+                                    </ul>
+                                    <strong class="p-movie-content__heading">
+                                        アップデートファイル配信のお知らせ
+                                    </strong>
+                                </figcaption>
+                            </a>
+                        </li>
+                        <li class="swiper-slide p-movie-slider__slide">
+                            <a href="/work/detail" class="inview p-movie-content__link">
+                                <figure class="c-picture__img p-movie-content__img">
+                                    <picture>
+                                        <img src="./assets/images/story__ss.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </figure>
+                                <figcaption class="p-movie-content__cap">
+                                    <ul class="p-movie-content__labels">
+                                        <li class="date">2022.01.02</li>
+                                        <li class="info">更新情報</li>
+                                    </ul>
+                                    <strong class="p-movie-content__heading">
+                                        アップデートファイル配信のお知らせ
+                                    </strong>
+                                </figcaption>
+                            </a>
+                        </li>
+                        <li class="swiper-slide p-movie-slider__slide">
+                            <a href="/work/detail" class="inview p-movie-content__link">
+                                <figure class="c-picture__img p-movie-content__img">
+                                    <picture>
+                                        <img src="./assets/images/story_bg2.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </figure>
+                                <figcaption class="p-movie-content__cap">
+                                    <ul class="p-movie-content__labels">
+                                        <li class="date">2022.01.02</li>
+                                        <li class="info">更新情報</li>
+                                    </ul>
+                                    <strong class="p-movie-content__heading">
+                                        アップデートファイル配信のお知らせ
+                                    </strong>
+                                </figcaption>
+                            </a>
+                        </li>
+                        <li class="swiper-slide p-movie-slider__slide">
+                            <a href="/work/detail" class="inview p-movie-content__link">
+                                <figure class="c-picture__img p-movie-content__img">
+                                    <picture>
+                                        <img src="./assets/images/story__ss.jpg" alt="" loading="lazy">
+                                    </picture>
+                                </figure>
+                                <figcaption class="p-movie-content__cap">
+                                    <ul class="p-movie-content__labels">
+                                        <li class="date">2022.01.02</li>
+                                        <li class="info">更新情報</li>
+                                    </ul>
+                                    <strong class="p-movie-content__heading">
+                                        アップデートファイル配信のお知らせ
+                                    </strong>
+                                </figcaption>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="c-smoke c-smoke__bottom"></div>
+    </section>
+
+    <section class="c-sec p-news">
+        <div class="c-smoke c-smoke__top"></div>
+        <div class="p-news__inner">
+            <div class="inview" style="text-align: left;">
+                <h2 class="c-sec__ttl">
+                    <span class="-en">news</span>
+                    <span class="-ja">更新情報</span>
+                </h2>
+            </div>
+            <ul class="p-news__list">
+                <li class="p-news__item">
+                    <a href="">
+                        <h3>2022.12.25</h3>
+                        <h2>更新情報を公開しました</h2>
+                    </a>
+                </li>
+                <li class="p-news__item">
+                    <a href="">
+                        <h3>2022.12.25</h3>
+                        <h2>更新情報を公開しました</h2>
+                    </a>
+                </li>
+                <li class="p-news__item">
+                    <a href="">
+                        <h3>2022.12.25</h3>
+                        <h2>更新情報を公開しました</h2>
+                    </a>
+                </li>
+                <li class="p-news__item u-dp-pc--sm">
+                    <a href="">
+                        <h3>2022.12.25</h3>
+                        <h2>更新情報を公開しました</h2>
+                    </a>
+                </li>
+                <li class="p-news__item u-dp-pc--sm">
+                    <a href="">
+                        <h3>2022.12.25</h3>
+                        <h2>更新情報を公開しました</h2>
+                    </a>
+                </li>
+                <li class="p-news__item u-dp-pc--sm">
+                    <a href="">
+                        <h3>2022.12.25</h3>
+                        <h2>更新情報を公開しました</h2>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="c-smoke c-smoke__bottom"></div>
+
+    </section>
+
+    <section id="about" class="p-about">
+        <div class="p-about__inner">
+            <div class="p-about__bg">
+                <img src="./assets/images/about_bg01.jpg" alt="">
+            </div>
+
+            <div class="p-about__txt">
+                <h2 class="c-sec__ttl">
+                    <span class="-en">CONCEPT</span>
+                    <span class="-ja">概要</span>
+                </h2>
+                <p class="inview js-scroll-slideView-delay">
+                    心霊スポットに出掛けた“少女2人”が謎の失踪……<br />廃墟・○○を巡る「惨殺事件」10年目の真実
+                </p>
+                <p class="inview js-scroll-slideView-delay">
+                    事件のはじまりは、1993年1月1日夜のことだった。<br />当時18歳だった2人の少女は、家族に「肝試しに行く」<br />と言ってメッセージを残し、行方不明になった。
+                </p>
+                <p class="inview js-scroll-slideView-delay">
+                    春日部市には、埼玉随一の心霊スポットと言われている廃墟がある。<br />1980年に廃業したホテル施設で「三角壮」と呼ばれていた。
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="story" class="p-story">
+        <div class="p-story__inner">
+
+            <div class="p-story__wrap">
+
+                <div class="p-story-content">
+                    <h2 class="c-sec__ttl u-dp-pc--sm">
+                        <span class="-en">STORY</span>
+                        <span class="-ja">物語</span>
+                    </h2>
+                    <ul class="p-story-content__list">
+                        <li class="p-story-content__item" id="heading1">
+                            <figure class="p-story-content__img">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./assets/images/kv_pc.jpg">
+                                    <img src="./assets/images/kv_sp.jpg" alt="" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="p-story-content__box">
+                                <p class="p-story-content__txt">
+                                    死が近づいてくる……<br />
+                                    私は体を震わせながらも冷静になろうとしていた。
+                                </p>
+                            </div>
+                        </li>
+                        <li class="p-story-content__item" id="heading2">
+
+                            <figure class="p-story-content__img">
+
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./assets/images/story_bg02.jpg">
+                                    <img src="./assets/images/about_sp_02.jpg" alt="" loading="lazy">
+                                </picture>
+
+                            </figure>
+                            <div class="p-story-content__box">
+
+                                <p class="p-story-content__txt">
+                                    死が近づいてくる……<br />
+                                    死が近づいてくる……<br />
+                                    死が近づいてくる……<br />
+                                    死が近づいてくる……
+                                </p>
+                            </div>
+                        </li>
+                        <li class="p-story-content__item" id="heading3">
+                            <figure class="p-story-content__img">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./assets/images/story_bg03_pc.jpg">
+                                    <img src="./assets/images/story_bg03_sp.jpg" alt="" loading="lazy">
+                                </picture>
+                            </figure>
+                            <div class="p-story-content__box">
+                                <p class="p-story-content__txt">
+                                    私は狂ったように踊り続けた。<br />
+                                    あのダンスが終わっても、私は踊り足りなかった。
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="c-smoke c-smoke__bottom"></div>
+    </section>
+
+
+    <div class="c-line"></div>
+    <div class="c-line c-line--reverse"></div>
+
+
+    <section id="chara" class="p-chara">
+        <div class="c-smoke c-smoke__top"></div>
+
+        <div class="p-chara__inner js-slider-wrap">
+            <div class="p-chara-header">
+
+                <h2 class="c-sec__ttl p-cha__ttl">
+                    <span class="-en inview">CHARACTER</span>
+                    <span class="-ja">登場人物</span>
+                </h2>
+
+                <div class="p-chara-slider__thumb js-slider-thumb">
+
+                    <ul class="swiper-wrapper p-chara-slider__list--thumb">
+                        <li class="swiper-slide p-chara-slider__item--thumb">
+                            <img src="./assets/images/chara_thumb_01.jpg" alt="" loading="lazy">
+                        </li>
+                        <li class="swiper-slide p-chara-slider__item--thumb">
+                            <img src="./assets/images/chara_thumb_02.jpg" alt="" loading="lazy">
+                        </li>
+                        <li class="swiper-slide p-chara-slider__item--thumb">
+                            <img src="./assets/images/chara_thumb_03.jpg" alt="" loading="lazy">
+                        </li>
+                        <li class="swiper-slide p-chara-slider__item--thumb">
+                            <img src="./assets/images/story_ss01.jpg" alt="" loading="lazy">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="swiper p-chara-slider js-slider-main">
+                <div class="u-dp-pc--sm">
+                    <div class="c-smoke c-smoke__top"></div>
+                </div>
+                <ul class="swiper-wrapper p-chara-slider__list">
+                    <li class="swiper-slide p-chara-slider__item--slide">
+                        <div class="p-chara-content__inner">
+                            <ul class="p-chara-content__list">
+                                <li class="p-chara-content__item p-chara-content__item--bg">
+                                    <figure class="p-chara-content__bg">
+                                        <img src="./assets/images/charaBg_04.jpg" alt="">
+                                    </figure>
+                                </li>
+                                <li class="p-chara-content__item p-chara-content__item--chara">
+                                    <figure class="p-chara-content__img p-chara-content__img--first">
+                                        <img src="./assets/images/test_05.png" alt="">
+                                    </figure>
+                                </li>
+                                <li class="p-chara-content__item p-chara-content__item--desc">
+                                    <div class="p-chara-content__frame">
+                                        <div class="p-chara-content__object">
+                                            <img src="./assets/images/rakugaki.png" alt="">
+                                        </div>
+                                        <div class="p-chara-content__heading">
+                                            <h3 class="p-chara-content__heading">CHARACTER-01</h3>
+                                            <p class="p-chara-content__sub">―&nbsp;登場人物01&nbsp;―</p>
+                                        </div>
+
+                                        <div class="p-chara-content__switch">
+                                            <div class="p-chara-content__btn">
+                                                <div class=""></div>
+                                                <span>立絵切替01</span>
+                                            </div>
+                                            <div class="p-chara-content__btn">
+                                                <div class=""></div>
+                                                <span>立絵切替02</span>
+                                            </div>
+                                        </div>
+                                        <p class="p-chara-content__txt">
+                                            本作の主人公。<br />
+                                            元々は普通の学生であったが悪魔に憑依されたことで、日常が一変怪物と化した。
+                                            筋肉や骨格の変容による人体破壊を防ぐために常に特殊な拘束衣を着用している。
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="swiper-slide p-chara-slider__item--slide">
+                        <div class="p-chara-content__inner">
+                            <ul class="p-chara-content__list">
+                                <li class="p-chara-content__item p-chara-content__item--bg">
+                                    <figure class="p-chara-content__bg">
+                                        <img src="./assets/images/charaBg_04.jpg" alt="">
+                                    </figure>
+                                </li>
+
+                                <li class="p-chara-content__item p-chara-content__item--chara">
+                                    <figure class="p-chara-content__img p-chara-content__img--third">
+                                        <img src="./assets/images/test_02.png" alt="">
+                                    </figure>
+                                </li>
+                                <li class="p-chara-content__item p-chara-content__item--desc">
+                                    <div class="p-chara-content__frame">
+                                        <div class="p-chara-content__object">
+                                            <img src="./assets/images/unko.png" alt="">
+                                        </div>
+                                        <div class="p-chara-content__heading">
+                                            <h3 class="p-chara-content__heading">CHARACTER-02</h3>
+                                            <p class="p-chara-content__sub">―&nbsp;登場人物02&nbsp;―</p>
+                                        </div>
+
+                                        <div class="p-chara-content__switch">
+                                            <div class="p-chara-content__btn">
+                                                <div class=""></div>
+                                                <span>立絵切替01</span>
+                                            </div>
+                                            <div class="p-chara-content__btn">
+                                                <div class=""></div>
+                                                <span>立絵切替02</span>
+                                            </div>
+                                        </div>
+                                        <p class="p-chara-content__txt">
+                                            不良少年<br />
+                                            道徳心の欠片も持ち合わせていない。ロッドによる殴打とその先端に仕込まれたワイヤーで獲物を追い詰める
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="swiper-slide p-chara-slider__item--slide">
+                        <div class="p-chara-content__inner">
+                            <ul class="p-chara-content__list">
+                                <li class="p-chara-content__item p-chara-content__item--bg">
+                                    <figure class="p-chara-content__bg">
+                                        <img src="./assets/images/charaBg_04.jpg" alt="">
+                                    </figure>
+                                </li>
+
+                                <li class="p-chara-content__item p-chara-content__item--chara">
+                                    <figure class="p-chara-content__img p-chara-content__img--second">
+                                        <img src="./assets/images/test_01.png" alt="">
+                                    </figure>
+                                </li>
+                                <li class="p-chara-content__item p-chara-content__item--desc">
+                                    <div class="p-chara-content__frame">
+                                        <div class="p-chara-content__object">
+                                            <img src="./assets/images/rakugaki.png" alt="">
+                                        </div>
+                                        <div class="p-chara-content__heading">
+                                            <h3 class="p-chara-content__heading">CHARACTER-02</h3>
+                                            <p class="p-chara-content__sub">―&nbsp;登場人物03&nbsp;―</p>
+                                        </div>
+                                        <div class="p-chara-content__switch">
+                                            <div class="p-chara-content__btn">
+                                                <div class=""></div>
+                                                <span>立絵切替01</span>
+                                            </div>
+                                            <div class="p-chara-content__btn">
+                                                <div class=""></div>
+                                                <span>立絵切替02</span>
+                                            </div>
+                                        </div>
+                                        <p class="p-chara-content__txt">
+                                            詐欺師<br />
+                                            悪魔祓いを騙り依頼者から高額な報酬を徴収する。主人公にとりついた悪魔を払うためにチベットからやってきた。
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="u-dp-pc--sm">
+                    <div class="c-smoke c-smoke__bottom"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="c-smoke c-smoke__bottom"></div>
+
+    </section>
+
+
+
+    <div class="c-line"></div>
+
+    <section id="system" class="c-sec p-sys">
+        <!-- <div class="c-smoke c-smoke__top"></div> -->
+        <h2 class="c-sec__ttl" style="margin-top: 20px;">
+            <span class="-en">SYSTEM</span>
+            <span class="-ja">進行方法</span>
+        </h2>
+
+        <div class="p-sys__inner js-slider-wrap">
+
+            <div class="inview js-scroll--slideLeft">
+                <div class="js-slider-thumb">
+                    <ul class="swiper-wrapper c-slider__list--thumb p-sys-nav__list">
+                        <li class="swiper-slide c-slider__item--thumb p-sys-nav__item">
+                            <span>狩猟</span>
+                        </li>
+                        <li class="swiper-slide c-slider__item--thumb p-sys-nav__item">
+                            <span>情報収集</span>
+                        </li>
+                        <li class="p-sys-nav__item c-slider__item--thumb" style="pointer-events: none;">
+                            <span>COMING SOON</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="swiper c-slider__main p-sys-slider js-slider-main">
+
+                    <ul class="swiper-wrapper c-slider__list--main p-sys-slider__wrap">
+                        <li class="swiper-slide c-slider__item--main p-sys-slider__item">
+                            <div class="p-sys-content__detail">
+
+                                <div class="c-sec__heading p-sys-content__ttl">
+                                    <p>FEAST</p>
+                                    <h3>狩猟</h3>
+                                </div>
+                                <p class="p-sys-content__txt">
+                                    物語を進めていくと、探索パートが発生します。<br />
+                                    探索パートは、背景を調べてアイテムをゲットしたり、キャラクターから情報を貰い、謎解きをするパートです。<br />
+                                    「探索開始！」の演出が入ったあと探索モードに自動で切り替わります。
+                                    背景をタップしたり、時には場所の移動もして、キャラクターに聞き込みを行ったりして情報や証拠を集めていきましょう。
+                                </p>
+                            </div>
+                            <div class="p-sys-content__thumb">
+                                <figure class="p-sys-content__img">
+                                    <a href="./assets/images/chara_bg_02.jpg" data-lity>
+                                        <img src="./assets/images/sys_bg.jpg" alt="">
+                                    </a>
+                                </figure>
+                                <figure class="p-sys-content__img">
+                                    <a href="./assets/images/chara_bg_02.jpg" data-lity>
+                                        <img src="./assets/images/system_01.jpg" alt="">
+                                    </a>
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="swiper-slide c-slider__item--main p-sys-slider__item">
+                            <div class="p-sys-content__detail">
+
+                                <div class="c-sec__heading p-sys-content__ttl">
+                                    <p>JOURNEY</p>
+                                    <h3>情報収集</h3>
+                                </div>
+                                <p class="p-sys-content__txt">
+                                    物語を進めていくと、探索パートが発生します。<br />
+                                    探索パートは、背景を調べてアイテムをゲットしたり、キャラクターから情報を貰い、謎解きをするパートです。<br />
+                                    「探索開始！」の演出が入ったあと探索モードに自動で切り替わります。
+                                    背景をタップしたり、時には場所の移動もして、<br />キャラクターに聞き込みを行ったりして情報や証拠を集めていきましょう。
+                                </p>
+                            </div>
+                            <div class="p-sys-content__thumb">
+                                <figure class="p-sys-content__img">
+                                    <a href="./assets/images/chara_bg_02.jpg" data-lity>
+                                        <img src="./assets/images/sys_bg.jpg" alt="">
+                                    </a>
+                                </figure>
+                                <figure class="p-sys-content__img">
+                                    <a href="./assets/images/chara_bg_02.jpg" data-lity>
+                                        <img src="./assets/images/system_01.jpg" alt="">
+                                    </a>
+                                </figure>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-controller">
+                        <div class="swiper-button-next js-slider-btnNext c-slider__btnNext"></div>
+                        <div class="swiper-button-prev js-slider-btnPrev c-slider__btnPrev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="product" class="c-sec p-product">
+        <h2 class="c-sec__ttl" style="margin-top: 20px;">
+            <span class="-en">PRODUCT</span>
+            <span class="-ja">製品情報</span>
+        </h2>
+
+        <div class="p-sys__inner js-slider-wrap">
+
+            <div class="inview js-scroll--slideRight">
+                <div class="js-slider-thumb">
+                    <ul class="swiper-wrapper c-slider__list--thumb p-sys-nav__list">
+                        <li class="swiper-slide c-slider__item--thumb p-sys-nav__item">
+                            <span>Switch</span>
+                        </li>
+                        <li class="swiper-slide c-slider__item--thumb p-sys-nav__item">
+                            <span>Steam</span>
+                        </li>
+                        <li class="p-sys-nav__item c-slider__item--thumb" style="pointer-events: none;">
+                            <span>COMING SOON</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="swiper c-slider__main p-sys-slider js-slider-main">
+
+                    <ul class="swiper-wrapper c-slider__list--main p-sys-slider__wrap">
+                        <li class="swiper-slide c-slider__item--main p-sys-slider__item">
+                            <div class="p-product__pack">
+                                <figure class="p-product__img">
+                                    <a href="./assets/images/chara_bg_02.jpg" data-lity>
+                                        <img src="./assets/images/product__pack02.png" alt="">
+                                    </a>
+                                </figure>
+                                <dl class="p-product__list--detail">
+                                    <dt>タイトル</dt>
+                                    <dd>GHOST</dd>
+                                    <dt>ジャンル</dt>
+                                    <dd>サイコホラー</dd>
+                                    <dt>発売日</dt>
+                                    <dd>4100年1月1日</dd>
+                                    <dt>価格</dt>
+                                    <dd>
+                                        <span>通常版：9,999円</span>
+                                    </dd>
+                                    <dt>対象年齢</dt>
+                                    <dd>Z（18才以上対象）</dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="swiper-slide c-slider__item--main p-sys-slider__item">
+                            <div class="p-product__pack">
+                                <figure class="p-product__img">
+                                    <a href="./assets/images/chara_bg_02.jpg" data-lity>
+                                        <img src="./assets/images/product__pack01.jpg" alt="">
+                                    </a>
+                                </figure>
+                                <dl class="p-product__list--detail">
+                                    <dt>タイトル</dt>
+                                    <dd>GHOST</dd>
+                                    <dt>ジャンル</dt>
+                                    <dd>サイコホラー</dd>
+                                    <dt>発売日</dt>
+                                    <dd>4100年1月1日</dd>
+                                    <dt>価格</dt>
+                                    <dd>
+                                        <span>通常版：9,999円</span>
+                                    </dd>
+                                    <dt>対象年齢</dt>
+                                    <dd>Z（18才以上対象）</dd>
+                                </dl>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <div class="swiper-controller">
+                        <div class="swiper-button-next js-slider-btnNext c-slider__btnNext"></div>
+                        <div class="swiper-button-prev js-slider-btnPrev c-slider__btnPrev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+<footer class="l-footer" id="footer">
+  <div class="c-line c-line--reverse"></div>
+  <!-- <div class="section__bottom inview"></div> -->
+  <div class="l-footer__inner">
+
+
+
+</footer>
+
+
+
+
+<!-- vendors -->
+<script src="./assets/scripts/vendors/jquery-3.6.0.min.js"></script>
+<script src="./assets/scripts/vendors/rellax.min.js"></script>
+<script src="./assets/scripts/vendors/lity.min.js"></script>
+<script src="./assets/scripts/vendors/jquery.matchHeight-min.js"></script>
+<script src="./assets/scripts/vendors/intersection-observer.js"></script>
+<script src="./assets/scripts/vendors/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+
+<script>
+  var rellax = new Rellax('.js-rellax', {
+    center: true,
+  });
+</script>
+
+
+<!-- scripts -->
+<script src="./assets/scripts/anim.js"></script>
+<script src="./assets/scripts/swiper.js"></script>
+<script src="./assets/scripts/main.js"></script>
+
+<!-- 
+ -->
+
+</body>
+
+</html>
