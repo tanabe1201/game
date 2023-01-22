@@ -37,7 +37,7 @@
       position: relative;
       // padding: min(20px, 60px) min(20px, 60px);
       padding: 8% 5.4% 8%;
-
+      pointer-events: none;
       @include mq-target(sm) {
         padding: min(vw(40px, 768), 60px);
       }
