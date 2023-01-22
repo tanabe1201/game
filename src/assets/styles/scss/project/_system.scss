@@ -3,9 +3,20 @@
 .p-sys {
     position: relative;
     padding-top: 80px;
+
+    @include mq-target(sm) {
+        padding-top: vw(100px,1920);
+    }
     &__inner {
         margin-top: 20px;
-        @include maxWidth(1000px);
+        // @include maxWidth(1000px);
+        margin: auto;
+        @include mq-target(sm) {
+            width: 82%;
+        }
+        @include mq-target(lg) {
+            width: vw(1200px,1920);
+        }
     }
 
     &-slider {
@@ -33,6 +44,10 @@
                 font-weight: 600;
                 margin-bottom: 0;
                 text-shadow: black 1px 1px 7px, black -1px 1px 7px, black 1px -1px 7px, black -1px -1px 7px;
+
+                @include mq-target(sm) {
+                    font-size: min(vw(38px,1920));
+                }
             }
 
             p {
@@ -43,6 +58,10 @@
                 -webkit-background-clip: text;
                 color: transparent;
                 font-weight: 700 !important;
+
+                @include mq-target(sm) {
+                    font-size: min(vw(50px,1920));
+                }
             }
         }
 
@@ -54,7 +73,7 @@
             margin: 20px 0;
             @include mq-target(sm) {
                 font-size: vw(16px, 1920);
-                margin: 20px 0 40px;
+                margin: vw(30px,1920) 0 vw(44px,1920);
             }
         }
 

@@ -73,13 +73,18 @@
     transition: 0.6s;
     background: $color-black;
     // transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    // background: #000;
     z-index: 600;
 
-    background-image: url(../../assets/images/charaBg_04.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+
     pointer-events: none;
+
+    &::before {
+      content: "";
+      @include absAll;
+      background: url(../../assets/images/sys_bg.png) repeat center center/contain;
+
+    }
 
     &.is-active {
       opacity: 1;
@@ -126,35 +131,31 @@
 
     list-style: none;
     padding: 0;
-    @include flex($justify:center);
+    @include flexCenter;
+    flex-direction: row;
     flex-wrap: wrap;
+    @include column4(48%);
 
     &--menu {
-      // padding: 60px;
-
-      @include mq(sm) {
-        padding: 30px 40px;
-      }
-
-      @include mq(xs) {
-        padding: 20px 20px 60px;
-      }
+      padding: 20px;
     }
   }
 
   &__item {
+
+    width: 48%;
     color: $color-white;
-    width: 33%;
+
+    padding: 0 0 20px;
+    margin: 0 0 16px;
+    // border-bottom: 1px solid $color-white;
+
+    @include mq(sm) {
+      padding: 0 0 14px;
+      margin: 0 0 10px;
+    }
 
     &:not(:last-of-type) {
-      padding: 0 0 20px;
-      margin: 0 0 16px;
-      // border-bottom: 1px solid $color-white;
-
-      @include mq(sm) {
-        padding: 0 0 14px;
-        margin: 0 0 10px;
-      }
     }
 
     span {

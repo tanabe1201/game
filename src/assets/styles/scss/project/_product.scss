@@ -4,6 +4,10 @@
 .p-product {
     position: relative;
     padding-top: 80px;
+
+    @include mq-target(sm) {
+        padding-top: vw(100px,1920);
+    }
     &__inner {
 
     }
@@ -43,6 +47,10 @@
                 line-height: 1.6;
 
                 font-size: min(vw(10px, 365), 14px);
+
+                @include mq-target(sm) {
+                    font-size: vw(18px,1920);
+                }
             }
 
             dd {
@@ -50,6 +58,12 @@
                 width: 60%;
                 margin-top: 10px;
                 line-height: 1.6;
+
+                
+                @include mq-target(sm) {
+                    font-size: vw(18px,1920);
+                }
+
                 span {
                     display: block;
                 }

@@ -39,11 +39,11 @@
       padding: 8% 5.4% 8%;
       pointer-events: none;
       @include mq-target(sm) {
-        padding: min(vw(40px, 768), 60px);
+        padding: vw(60px,1920);
       }
 
       z-index: 10;
-      background: url(../../assets/images/sys_bg.png) no-repeat center center/100% 100%;
+      background: url(../../assets/images/sys_bg.webp) no-repeat center center/100% 100%;
 
       &.swiper-slide-active {
         opacity: 1 !important;
@@ -120,10 +120,14 @@
     margin: auto;
     width: min(vw(42px, 365), 66px);
     height: min(vw(42px, 365), 66px);
-
+    display: none;
     @include mq-target(sm) {
       width: vw(66px, 1920);
       height: vw(66px, 1920);
+    }
+
+    @include mq-target(sm) {
+      display: flex;
     }
 
     &::after {
@@ -152,4 +156,8 @@
   &__btnNext {
     left: calc(100% + 30px);
   }
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
 }

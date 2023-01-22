@@ -27,6 +27,10 @@
     margin-bottom: 14px;
     @include flex($align:center);
     margin-bottom: vw(30px, 1920);
+
+    .c-sec__ttl {
+      margin: 0;
+    }
   }
 
   &-slider {
@@ -102,37 +106,6 @@
         margin-left: vw(16px, 1920);
       }
     }
-
-    // &__controller {
-    //   margin: min(vw(15px, 768), 30px) 0 0;
-    //   @include flex($align:center, $justify:space-between);
-    // }
-
-    // &__pagi {
-    //   position: relative;
-    //   bottom: initial !important;
-    //   @include flex($align:center, $wrap:wrap);
-    //   .swiper-pagination-bullet {
-    //     background: $color-main;
-    //     width: min(vw(10px, 365), 20px);
-    //     height: 3px;
-    //     border-radius: 0;
-    //     transition: width .8s cubic-bezier(.2, 1, .2, 1);
-
-    //     @include mq-target(sm) {
-    //       width: min(vw(20px, 768), 40px);
-    //     }
-    //   }
-
-    //   .swiper-pagination-bullet-active {
-    //     width: min(vw(20px, 365), 40px);
-    //     background: $color-red;
-
-    //     @include mq-target(sm) {
-    //       width: min(vw(40px, 768), 80px);
-    //     }
-    //   }
-    // }
 
     &__btnPrev,
     &__btnNext {
@@ -284,6 +257,3 @@
 }
 
 
-.swiper-button-disabled {
-  opacity: 0.35 !important;
-}

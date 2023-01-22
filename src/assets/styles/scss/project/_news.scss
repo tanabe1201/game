@@ -23,6 +23,7 @@
     position: relative;
     width: 90%;
     margin: auto;
+    text-align: left;
     @include mq-target(sm) {
       width: 96%;
     }
