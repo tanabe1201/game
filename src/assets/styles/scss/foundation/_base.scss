@@ -275,3 +275,53 @@ textarea {
 	color: $color-red;
 	margin-top: 10px;
 }
+
+
+
+/*--------------------------------
+ IE BLOCK
+---------------------------------*/
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .IEblock {
+        position: fixed;
+        display: block !important;
+        z-index: 30000;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+		background: $color-black;
+    }
+
+    .IEblock .comment_block {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: center;
+        height: 90%;
+        width: 90%;
+        max-height: 400px;
+        max-width: 600px;
+    }
+
+    .IEblock .comment_block p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        color: #111;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .IEblock .comment_block p span {
+        font-size: 0.8em;
+    }
+}

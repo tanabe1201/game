@@ -2,48 +2,44 @@
 
 var $body = $("body");
 
-$(document).ready(function () {
+$('.js-draw--trigger').on('click', function () {
+  $('.js-draw--trigger').toggleClass('is-active');
+  $('.js-draw--content').toggleClass('is-active');
+  $('.js-draw--bg').toggleClass('is-active');
+  $('body').toggleClass('lock');
+})
 
-  $('.js-draw--trigger').on('click', function () {
-    $('.js-draw--trigger').toggleClass('is-active');
-    $('.js-draw--content').toggleClass('is-active');
-    $('.js-draw--bg').toggleClass('is-active');
-    $('body').toggleClass('lock');
-  })
+$('a[href^="#"]').on('click', function () {
+  var href = $(this).attr('href');
+  var position = $(href).offset().top;
+  $('html, body').animate({
+    'scrollTop': position
+  }, 500);
+  return false;
+})
 
-  $('a[href^="#"]').on('click', function () {
-    var href = $(this).attr('href');
-    var position = $(href).offset().top;
-    $('html, body').animate({
-      'scrollTop': position
-    }, 500);
-    return false;
-  })
+$(window).scroll(function () {
+  if($(window).scrollTop() > 600) {
+    $('.sc-inview').addClass('is-anim');
+  } else {
+    $('.sc-inview').removeClass('is-anim');
+  }
+})
 
-  $(window).scroll(function () {
-    if($(window).scrollTop() > 600) {
-      $('.sc-inview').addClass('is-anim');
-    } else {
-      $('.sc-inview').removeClass('is-anim');
-    }
-  })
+const loading = $("#js-loading");
 
-  const loading = $("#js-loading");
-
-  $(window).on("load", function () {
-    let windowHeight = $(window).height();
-    $(".mv").height(windowHeight);
-    loading.delay("1000").fadeOut("2000");
-  });
-
-  //ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
-  setTimeout(function () {
-    loading.fadeOut("3000");
-  }, 8000);
-
-  $("a[href*='http://']:not([href*='" + location.hostname + "']),[href*='https://']:not([href*='" + location.hostname + "'])").attr('target', '_blank').addClass('blank');
+$(window).on("load", function () {
+  let windowHeight = $(window).height();
+  $(".mv").height(windowHeight);
+  loading.delay("1000").fadeOut("2000");
 });
 
+//ページの読み込みが完了してなくても3秒後にアニメーションを非表示にする
+setTimeout(function () {
+  loading.fadeOut("3000");
+}, 8000);
+
+$("a[href*='http://']:not([href*='" + location.hostname + "']),[href*='https://']:not([href*='" + location.hostname + "'])").attr('target', '_blank').addClass('blank');
 
 document.addEventListener('DOMContentLoaded', function () {
 
